@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+
+{% block title %}Register Merchant - Yuno KYB{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-building"></i> Merchant Registration
+                </h4>
+            </div>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <h5 class="border-bottom pb-2 mb-3">
+                        <i class="bi bi-briefcase"></i> Business Information
+                    </h5>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Business Name *</label>
+                            {{ form.business_name }}
+                            {% if form.business_name.errors %}
+                                <div class="text-danger small">{{ form.business_name.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Registration Number *</label>
+                            {{ form.registration_number }}
+                            {% if form.registration_number.errors %}
+                                <div class="text-danger small">{{ form.registration_number.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Country *</label>
+                            {{ form.country }}
+                            {% if form.country.errors %}
+                                <div class="text-danger small">{{ form.country.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Business Category *</label>
+                            {{ form.business_category }}
+                            {% if form.business_category.errors %}
+                                <div class="text-danger small">{{ form.business_category.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <h5 class="border-bottom pb-2 mb-3">
+                        <i class="bi bi-envelope"></i> Contact Information
+                    </h5>
+
+                    <div class="row g-3 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Email *</label>
+                            {{ form.email }}
+                            {% if form.email.errors %}
+                                <div class="text-danger small">{{ form.email.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Phone *</label>
+                            {{ form.phone }}
+                            {% if form.phone.errors %}
+                                <div class="text-danger small">{{ form.phone.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label">Business Address *</label>
+                            {{ form.address }}
+                            {% if form.address.errors %}
+                                <div class="text-danger small">{{ form.address.errors.0 }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <h5 class="border-bottom pb-2 mb-3">
+                        <i class="bi bi-people"></i> Beneficial Owners
+                        <small class="text-muted">(Optional - Required for high-risk businesses)</small>
+                    </h5>
+
+                    {{ owner_formset.management_form }}
+
+                    <div id="owner-forms">
+                        {% for owner_form in owner_formset %}
+                            <div class="owner-form card mb-3 {% if forloop.first %}{% else %}border-secondary{% endif %}">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <strong>Owner #{{ forloop.counter }}</strong>
+                                        {% if not forloop.first %}
+                                            <button type="button" class="btn btn-sm btn-outline-danger remove-owner">
+                                                <i class="bi bi-trash"></i> Remove
+                                            </button>
+                                        {% endif %}
+                                    </div>
+
+                                    {% for hidden in owner_form.hidden_fields %}
+                                        {{ hidden }}
+                                    {% endfor %}
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="form-label">Full Name</label>
+                                            {{ owner_form.full_name }}
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="form-label">Nationality</label>
+                                            {{ owner_form.nationality }}
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label">Ownership %</label>
+                                            {{ owner_form.ownership_percentage }}
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label">ID Type</label>
+                                            {{ owner_form.id_document_type }}
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="form-label">ID Number</label>
+                                            {{ owner_form.id_document_number }}
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                {{ owner_form.is_pep }}
+                                                <label class="form-check-label">
+                                                    Politically Exposed Person (PEP)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <button type="button" class="btn btn-outline-secondary mb-4" id="add-owner">
+                        <i class="bi bi-plus-circle"></i> Add Another Owner
+                    </button>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-check-circle"></i> Submit Registration
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const ownerForms = document.getElementById('owner-forms');
+    const addOwnerBtn = document.getElementById('add-owner');
+    const totalForms = document.getElementById('id_owners-TOTAL_FORMS');
+
+    addOwnerBtn.addEventListener('click', function() {
+        const formCount = parseInt(totalForms.value);
+        const newForm = ownerForms.querySelector('.owner-form').cloneNode(true);
+
+        // Update form index
+        newForm.innerHTML = newForm.innerHTML.replace(/-0-/g, `-${formCount}-`);
+        newForm.innerHTML = newForm.innerHTML.replace(/owners-0/g, `owners-${formCount}`);
+
+        // Clear values
+        newForm.querySelectorAll('input').forEach(input => {
+            if (input.type !== 'hidden') {
+                input.value = '';
+                if (input.type === 'checkbox') input.checked = false;
+            }
+        });
+
+        // Update owner number
+        newForm.querySelector('strong').textContent = `Owner #${formCount + 1}`;
+
+        // Add remove button if not present
+        const header = newForm.querySelector('.d-flex');
+        if (!header.querySelector('.remove-owner')) {
+            const removeBtn = document.createElement('button');
+            removeBtn.type = 'button';
+            removeBtn.className = 'btn btn-sm btn-outline-danger remove-owner';
+            removeBtn.innerHTML = '<i class="bi bi-trash"></i> Remove';
+            header.appendChild(removeBtn);
+        }
+
+        ownerForms.appendChild(newForm);
+        totalForms.value = formCount + 1;
+
+        // Attach remove handler
+        attachRemoveHandlers();
+    });
+
+    function attachRemoveHandlers() {
+        document.querySelectorAll('.remove-owner').forEach(btn => {
+            btn.onclick = function() {
+                this.closest('.owner-form').remove();
+                updateFormIndexes();
+            };
+        });
+    }
+
+    function updateFormIndexes() {
+        const forms = document.querySelectorAll('.owner-form');
+        totalForms.value = forms.length;
+        forms.forEach((form, index) => {
+            form.querySelector('strong').textContent = `Owner #${index + 1}`;
+        });
+    }
+
+    attachRemoveHandlers();
+});
+</script>
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends 'base.html' %}
+
+{% block title %}Status: {{ merchant.business_name }} - Yuno KYB{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-8">
+        <div class="card shadow mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h4 class="mb-0">
+                    <i class="bi bi-building"></i> {{ merchant.business_name }}
+                </h4>
+                {% if merchant.status == 'APPROVED' %}
+                    <span class="badge bg-success fs-6">
+                        <i class="bi bi-check-circle"></i> Approved
+                    </span>
+                {% elif merchant.status == 'REJECTED' %}
+                    <span class="badge bg-danger fs-6">
+                        <i class="bi bi-x-circle"></i> Rejected
+                    </span>
+                {% elif merchant.status == 'UNDER_REVIEW' %}
+                    <span class="badge bg-info fs-6">
+                        <i class="bi bi-hourglass-split"></i> Under Review
+                    </span>
+                {% else %}
+                    <span class="badge bg-warning fs-6">
+                        <i class="bi bi-clock"></i> Pending
+                    </span>
+                {% endif %}
+            </div>
+            <div class="card-body">
+                <h5 class="border-bottom pb-2">Business Information</h5>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <p><strong>Registration Number:</strong><br><code>{{ merchant.registration_number }}</code></p>
+                        <p><strong>Country:</strong><br>{{ merchant.get_country_display }}</p>
+                        <p><strong>Business Category:</strong><br>{{ merchant.get_business_category_display }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Email:</strong><br>{{ merchant.email }}</p>
+                        <p><strong>Phone:</strong><br>{{ merchant.phone }}</p>
+                        <p><strong>Address:</strong><br>{{ merchant.address }}</p>
+                    </div>
+                </div>
+
+                {% if merchant.owners.exists %}
+                <h5 class="border-bottom pb-2">Beneficial Owners</h5>
+                <div class="table-responsive mb-4">
+                    <table class="table table-sm">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Nationality</th>
+                                <th>Ownership</th>
+                                <th>PEP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for owner in merchant.owners.all %}
+                            <tr>
+                                <td>{{ owner.full_name }}</td>
+                                <td>{{ owner.nationality }}</td>
+                                <td>{{ owner.ownership_percentage }}%</td>
+                                <td>
+                                    {% if owner.is_pep %}
+                                        <span class="badge bg-warning">Yes</span>
+                                    {% else %}
+                                        <span class="badge bg-secondary">No</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                {% endif %}
+
+                {% if merchant.review_notes %}
+                <h5 class="border-bottom pb-2">Review Notes</h5>
+                <div class="alert alert-secondary">
+                    {{ merchant.review_notes }}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        {% if risk_assessment %}
+        <div class="card shadow mb-4">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-graph-up"></i> Risk Assessment</h5>
+            </div>
+            <div class="card-body">
+                <div class="text-center mb-3">
+                    <div class="display-4
+                        {% if risk_assessment.risk_score <= 30 %}text-success
+                        {% elif risk_assessment.risk_score <= 60 %}text-warning
+                        {% else %}text-danger{% endif %}">
+                        {{ risk_assessment.risk_score }}
+                    </div>
+                    <p class="text-muted mb-0">Risk Score (0-100)</p>
+                </div>
+
+                <div class="progress mb-3" style="height: 10px;">
+                    <div class="progress-bar
+                        {% if risk_assessment.risk_score <= 30 %}bg-success
+                        {% elif risk_assessment.risk_score <= 60 %}bg-warning
+                        {% else %}bg-danger{% endif %}"
+                        style="width: {{ risk_assessment.risk_score }}%">
+                    </div>
+                </div>
+
+                {% if risk_assessment.risk_factors %}
+                <h6>Risk Factors:</h6>
+                <ul class="list-unstyled">
+                    {% for factor in risk_assessment.risk_factors %}
+                    <li><i class="bi bi-exclamation-triangle text-warning"></i> {{ factor }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <p class="text-muted small mb-0">
+                    Assessed: {{ risk_assessment.assessment_date|date:"M d, Y H:i" }}
+                </p>
+            </div>
+        </div>
+        {% endif %}
+
+        {% if screening_results %}
+        <div class="card shadow">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-shield-check"></i> Screening Results</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                {% for result in screening_results %}
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <strong>{{ result.get_screening_type_display }}</strong>
+                            <br><small class="text-muted">{{ result.screened_entity }}</small>
+                        </span>
+                        {% if result.status == 'CLEAR' %}
+                            <span class="badge bg-success">Clear</span>
+                        {% elif result.status == 'MATCH' %}
+                            <span class="badge bg-danger">Match</span>
+                        {% else %}
+                            <span class="badge bg-warning">Potential</span>
+                        {% endif %}
+                    </div>
+                    {% if result.matched_list %}
+                    <small class="text-danger">Matched: {{ result.matched_list }}</small>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<div class="mt-3">
+    <a href="{% url 'check_status' %}" class="btn btn-outline-secondary">
+        <i class="bi bi-arrow-left"></i> Back to Status Check
+    </a>
+</div>
+{% endblock %}

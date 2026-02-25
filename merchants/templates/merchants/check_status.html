@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block title %}Check Status - Yuno KYB{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h4 class="mb-0">
+                    <i class="bi bi-search"></i> Check Application Status
+                </h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">Registration Number</label>
+                        {{ form.registration_number }}
+                        <div class="form-text">Enter the registration number you received during signup.</div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-info text-white">
+                            <i class="bi bi-search"></i> Check Status
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        {% if merchant %}
+        <div class="card shadow mt-4">
+            <div class="card-header">
+                <h5 class="mb-0">Application Status</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-borderless">
+                    <tr>
+                        <th>Business Name:</th>
+                        <td>{{ merchant.business_name }}</td>
+                    </tr>
+                    <tr>
+                        <th>Registration Number:</th>
+                        <td><code>{{ merchant.registration_number }}</code></td>
+                    </tr>
+                    <tr>
+                        <th>Status:</th>
+                        <td>
+                            {% if merchant.status == 'APPROVED' %}
+                                <span class="badge bg-success fs-6">
+                                    <i class="bi bi-check-circle"></i> Approved
+                                </span>
+                            {% elif merchant.status == 'REJECTED' %}
+                                <span class="badge bg-danger fs-6">
+                                    <i class="bi bi-x-circle"></i> Rejected
+                                </span>
+                            {% elif merchant.status == 'UNDER_REVIEW' %}
+                                <span class="badge bg-info fs-6">
+                                    <i class="bi bi-hourglass-split"></i> Under Review
+                                </span>
+                            {% else %}
+                                <span class="badge bg-warning fs-6">
+                                    <i class="bi bi-clock"></i> Pending
+                                </span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Risk Level:</th>
+                        <td>
+                            {% if merchant.risk_level == 'LOW' %}
+                                <span class="text-success"><i class="bi bi-shield-check"></i> Low Risk</span>
+                            {% elif merchant.risk_level == 'MEDIUM' %}
+                                <span class="text-warning"><i class="bi bi-shield-exclamation"></i> Medium Risk</span>
+                            {% else %}
+                                <span class="text-danger"><i class="bi bi-shield-x"></i> High Risk</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Submitted:</th>
+                        <td>{{ merchant.created_at|date:"F d, Y H:i" }}</td>
+                    </tr>
+                    {% if merchant.review_notes %}
+                    <tr>
+                        <th>Notes:</th>
+                        <td>{{ merchant.review_notes }}</td>
+                    </tr>
+                    {% endif %}
+                </table>
+
+                <a href="{% url 'merchant_status' merchant.registration_number %}" class="btn btn-outline-primary">
+                    <i class="bi bi-eye"></i> View Full Details
+                </a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

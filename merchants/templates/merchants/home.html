@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}Yuno KYB - Merchant Onboarding{% endblock %}
+
+{% block content %}
+<div class="py-5 text-center">
+    <h1 class="display-4">
+        <i class="bi bi-shield-check text-primary"></i>
+        Yuno KYB
+    </h1>
+    <p class="lead text-muted">
+        Know Your Business - Merchant Compliance Onboarding
+    </p>
+</div>
+
+<div class="row g-4 justify-content-center">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <i class="bi bi-building text-primary" style="font-size: 3rem;"></i>
+                </div>
+                <h5 class="card-title">Register Your Business</h5>
+                <p class="card-text text-muted">
+                    New merchant? Start your KYB onboarding process by registering your business.
+                </p>
+                <a href="{% url 'register_merchant' %}" class="btn btn-primary">
+                    <i class="bi bi-plus-circle"></i> Register Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <i class="bi bi-search text-info" style="font-size: 3rem;"></i>
+                </div>
+                <h5 class="card-title">Check Application Status</h5>
+                <p class="card-text text-muted">
+                    Already registered? Check your application status using your registration number.
+                </p>
+                <a href="{% url 'check_status' %}" class="btn btn-info text-white">
+                    <i class="bi bi-search"></i> Check Status
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+            <div class="card-body text-center">
+                <div class="mb-3">
+                    <i class="bi bi-speedometer2 text-success" style="font-size: 3rem;"></i>
+                </div>
+                <h5 class="card-title">Compliance Dashboard</h5>
+                <p class="card-text text-muted">
+                    View statistics and monitor merchant onboarding compliance.
+                </p>
+                <a href="{% url 'dashboard' %}" class="btn btn-success">
+                    <i class="bi bi-speedometer2"></i> View Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="card bg-light">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <i class="bi bi-info-circle"></i> About KYB Compliance
+                </h5>
+                <p class="card-text">
+                    Know Your Business (KYB) is a critical compliance process that helps payment providers
+                    verify the legitimacy of merchant businesses before allowing them to process payments.
+                    Our system performs:
+                </p>
+                <ul class="mb-0">
+                    <li><strong>Risk Assessment</strong> - Evaluate business category and jurisdiction risk</li>
+                    <li><strong>Beneficial Ownership</strong> - Identify ultimate beneficial owners</li>
+                    <li><strong>Sanctions Screening</strong> - Check against OFAC, UN, and other sanctions lists</li>
+                    <li><strong>PEP Screening</strong> - Identify politically exposed persons</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
