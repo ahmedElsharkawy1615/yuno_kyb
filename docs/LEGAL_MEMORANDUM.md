@@ -1,17 +1,19 @@
 # LEGAL MEMORANDUM
 
-## PRIVILEGED AND CONFIDENTIAL
-### ATTORNEY-CLIENT PRIVILEGED
+**PRIVILEGED AND CONFIDENTIAL**
+**ATTORNEY-CLIENT COMMUNICATION**
 
 ---
 
-**TO:** Chief Executive Officer and Executive Team, Yuno
+**TO:** Maria Santos, Chief Executive Officer
+       Executive Leadership Team
+       Board of Directors
 
-**FROM:** Legal & Compliance Advisory
+**FROM:** Office of General Counsel
 
 **DATE:** February 25, 2026
 
-**RE:** KYB Compliance Assessment and Risk Mitigation Strategy Following Indonesian Payment Facilitator Incident
+**RE:** KYB Compliance Assessment and Risk Mitigation Strategy Following Indonesian Payment Facilitator Enforcement Action
 
 ---
 
@@ -19,494 +21,526 @@
 
 ### Situation Overview
 
-Following the recent Indonesian payment facilitator scandal involving illegal online gambling operations processed through legitimate payment infrastructure, Yuno faces heightened regulatory scrutiny across its Southeast Asian operations. This memorandum assesses Yuno's regulatory exposure as a payment orchestration platform and provides actionable risk mitigation recommendations.
+Following the Indonesian regulatory enforcement action against a payment facilitator for inadequate merchant screening, Yuno faces immediate pressure from three stakeholder groups: (1) institutional investors requesting compliance briefings, (2) enterprise clients invoking audit clauses, and (3) a Philippine PSP partner reviewing its relationship with Yuno. This memorandum provides a realistic assessment of Yuno's regulatory exposure and actionable recommendations for the next 30-90 days.
 
 ### Key Findings
 
-| Risk Area | Severity | Immediate Action Required |
-|-----------|----------|---------------------------|
-| Indonesia Regulatory Exposure | **CRITICAL** | Yes - 30 days |
-| Philippines PSP Relationship | **HIGH** | Yes - 30 days |
-| Singapore MAS Compliance | **MEDIUM** | Yes - 60 days |
-| KYB Process Gaps | **HIGH** | Yes - 30 days |
+| Risk Category | Assessment | Priority |
+|---------------|------------|----------|
+| **Indonesia** | HIGH - Direct regulatory attention; evolving "payment chain" doctrine | Immediate |
+| **Philippines** | HIGH - Active PSP relationship at risk; BSP regulatory scrutiny | Immediate |
+| **Singapore** | MEDIUM-HIGH - Clear PSA 2019 framework; MAS enforcement precedent | Short-term |
 
-### Priority Actions (Next 30-90 Days)
+### Critical Takeaways for Board Presentation
 
-**Immediate (0-30 Days):**
-1. Implement enhanced merchant screening for all new onboarding
-2. Conduct retrospective review of existing Indonesia-connected merchants
-3. Engage proactively with Philippine PSP partner to demonstrate compliance improvements
+1. **Contractual protections are insufficient.** While Yuno's PSP contracts state that partners bear "sole responsibility" for compliance, this contractual allocation does not bind regulators and may not withstand scrutiny under expanding "payment chain responsibility" doctrines.
 
-**Short-term (30-60 Days):**
-4. Deploy automated sanctions screening system
-5. Establish beneficial ownership verification protocols
-6. Create risk-based merchant categorization framework
+2. **Current practices create genuine regulatory exposure.** Yuno's lack of sanctions screening, beneficial ownership verification, and business model risk assessment represents a compliance gap that regulators in our priority markets could characterize as inadequate, particularly given the 8% of merchants in high-risk categories.
 
-**Medium-term (60-90 Days):**
-7. Complete MAS Payment Services Act compliance audit
-8. Implement ongoing transaction monitoring capabilities
-9. Establish quarterly compliance reporting to Board
+3. **The reputational and commercial risk is immediate; legal risk is crystallizing.** The Philippine PSP partner's review and investor inquiries represent tangible near-term threats. However, the Indonesian enforcement action signals that regulators across APAC are adopting broader interpretations of compliance obligations throughout the payment chain.
 
-### Key Takeaways for Board Presentation
+### Priority Actions (Next 30 Days)
 
-1. **Yuno is NOT directly liable** for merchant misconduct, but faces significant **regulatory and reputational risk** as a payment chain participant
-2. **Proactive compliance investment** is substantially less costly than reactive enforcement response
-3. **KYB enhancement** is both a regulatory necessity and competitive differentiator
-4. **Estimated compliance investment:** USD 150,000-250,000 (one-time) + USD 50,000/year (ongoing)
-5. **Estimated risk exposure without action:** USD 1-5 million in potential fines, plus license revocation risk
+1. Proactively engage Philippine PSP partner with enhanced compliance roadmap
+2. Prepare standardized investor briefing materials on compliance posture
+3. Implement immediate sanctions screening for all merchant onboarding
+4. Commission independent gap analysis of current onboarding vs. regulatory best practices
+5. Establish enhanced due diligence protocols for the 8% high-risk merchant segment
 
 ---
 
-## SECTION 1: REGULATORY RISK ASSESSMENT
+## PART I: REGULATORY RISK ASSESSMENT
 
-### 1.1 Yuno's Position in the Payment Chain
+### Jurisdiction Selection Rationale
 
-Yuno operates as a **payment orchestration platform**, providing:
-- Single API integration for merchants to access multiple payment providers
-- Transaction routing and optimization
-- Consolidated reporting and reconciliation
+We have prioritized three markets based on the following criteria:
 
-**Critical Legal Question:** Does Yuno's role as an orchestrator/aggregator create KYB obligations equivalent to those of licensed Payment Service Providers (PSPs)?
+- **Indonesia**: Ground zero of the current enforcement action; heightened regulatory attention across the payment ecosystem
+- **Philippines**: Active commercial threat from PSP partner review; BSP has clear regulatory authority over payment service providers
+- **Singapore**: Most developed regulatory framework in APAC under the Payment Services Act 2019; MAS interpretations often influence regional regulatory approaches
 
-**Analysis:** While Yuno may not hold direct PSP licenses in all jurisdictions, the regulatory trend clearly indicates:
+Brazil, Mexico, and Colombia (significant markets by volume) present lower immediate regulatory risk given the current APAC-focused scrutiny and different regulatory maturity levels. However, we recommend monitoring these jurisdictions for spillover effects.
 
-1. **Regulatory authorities increasingly view the entire payment chain** as responsible for merchant due diligence
-2. **Contractual obligations** from PSP partners typically flow KYB requirements upstream
-3. **Reputational contagion** affects all participants when merchant misconduct is discovered
+---
 
-### 1.2 Indonesia Analysis
+### A. Indonesia
 
 #### Regulatory Framework
 
-| Regulation | Authority | Relevance to Yuno |
-|------------|-----------|-------------------|
-| Bank Indonesia Regulation No. 22/23/PBI/2020 | Bank Indonesia | Payment system licensing and AML requirements |
-| OJK Regulation No. 12/POJK.01/2017 | OJK | AML/CFT for financial services |
-| Presidential Regulation No. 13/2018 | Government | Beneficial ownership transparency |
+Indonesia's payment system is primarily regulated by Bank Indonesia (BI) under the Indonesia Payment System Blueprint 2025, with updated regulations under BI Regulation No. 4 of 2025 on Payment System Policy and BI Regulation No. 10 of 2025 concerning Regulation of the Payment System Industry (PBI 10/2025), effective March 31, 2026.
 
-#### Current Risk Assessment: CRITICAL
+Key regulatory characteristics:
+- BI mandates KYC and AML/CFT implementation across the payment ecosystem
+- The 2025-2030 Blueprint emphasizes "balance between innovation and consumer protection, integrity and stability"
+- All regulated parties—banks, non-banks, infrastructure providers, and affiliates—must comply with BI provisions
+- OJK (Financial Services Authority) provides additional oversight for certain fintech activities under OJK Regulation No. 3 of 2024
 
-**Specific Concerns:**
+#### Applicability to Payment Orchestrators
 
-1. **Direct Regulatory Attention:** Indonesia is ground zero for the payment facilitator scandal. Bank Indonesia and OJK are actively investigating payment chain participants.
+**Current Legal Ambiguity:** Indonesian regulations were drafted primarily with traditional payment facilitators and acquirers in mind. Payment orchestrators like Yuno occupy a regulatory gray zone. However, the recent enforcement action included language emphasizing that **"all entities in the payment chain share responsibility for preventing illicit use."**
 
-2. **Merchant Nexus:** If any of the merchants involved in the scandal processed payments through Yuno-connected PSPs, Yuno will face scrutiny regarding:
-   - What due diligence was performed at onboarding?
-   - Were there transaction patterns indicating gambling activity?
-   - What ongoing monitoring was in place?
+**Risk Assessment:** This "payment chain responsibility" statement, while made in the context of a licensed payment facilitator, signals BI's willingness to look beyond direct licensees when assessing compliance failures. Yuno's position as the technical routing layer—making decisions about which PSP processes each transaction—could be characterized by regulators as active participation in the payment chain rather than passive technology provision.
 
-3. **License Implications:** While Yuno may operate through licensed PSP partners, regulatory action against those partners (license suspension/revocation) would directly impact Yuno's operations.
+**Specific Vulnerabilities:**
+- Yuno routes transactions through Indonesian PSPs without independent KYB verification
+- No sanctions screening at the Yuno platform level
+- Multi-PSP routing means a single merchant's transactions may flow through multiple partners, creating monitoring gaps
+- The 8% high-risk merchant segment (money transfer, crypto-adjacent) presents elevated exposure
 
-#### Key Regulatory Requirements
+#### Risk Level: **HIGH**
 
-**Bank Indonesia PBI 22/23/PBI/2020 requires:**
-- Customer identification and verification
-- Beneficial ownership identification for legal entities
-- Ongoing due diligence and transaction monitoring
-- Suspicious transaction reporting
-
-**Application to Payment Orchestrators:**
-- BI has signaled intent to extend oversight to "technology service providers" in the payment ecosystem
-- Draft regulations under consideration would require registration of payment facilitators and aggregators
-- **Recommendation:** Prepare for direct regulatory obligations within 12-18 months
-
-#### Recommended Actions for Indonesia
-
-| Priority | Action | Timeline | Responsible |
-|----------|--------|----------|-------------|
-| 1 | Conduct retrospective review of all Indonesia-connected merchants | 14 days | Compliance |
-| 2 | Implement enhanced screening for Indonesia market | 21 days | Product/Engineering |
-| 3 | Engage external counsel for BI/OJK regulatory consultation | 30 days | Legal |
-| 4 | Prepare incident response plan for potential regulatory inquiry | 30 days | Legal/Compliance |
+The combination of direct regulatory attention from the scandal, ambiguous but expanding regulatory interpretation, and Yuno's lack of independent compliance controls creates material legal exposure. While Yuno may not be the primary enforcement target, regulatory inquiries, requests for information, or being named in enforcement proceedings against PSP partners are realistic near-term risks.
 
 ---
 
-### 1.3 Philippines Analysis
+### B. Philippines
 
 #### Regulatory Framework
 
-| Regulation | Authority | Relevance to Yuno |
-|------------|-----------|-------------------|
-| Republic Act No. 9160 (AMLA) as amended | AMLC | AML obligations for covered persons |
-| BSP Circular No. 706 | BSP | E-money and payment system regulations |
-| BSP Circular No. 1022 | BSP | Enhanced due diligence requirements |
+The Bangko Sentral ng Pilipinas (BSP) regulates payment service providers through a comprehensive circular framework:
 
-#### Current Risk Assessment: HIGH
+- **BSP Circular No. 1206 (Series of 2024)**: Consolidated rules for Money Service Businesses under the Manual of Regulations for Non-bank Financial Institutions (MORNBFI)
+- **BSP Circular No. 1170**: Permits electronic KYC verification and establishes technology-enabled onboarding standards
+- New guidelines for merchant payment applications issued in January 2025 require operators to obtain Merchant Acquirer Licenses (MAL) with specific capital requirements and compliance obligations
 
-**Specific Concerns:**
+Key regulatory characteristics:
+- BSP mandates governance standards and risk management measures addressing operational risks, AML, and customer protection
+- Three-phase licensing process with eligibility, evaluation, and issuance stages
+- Explicit AML/CFT compliance requirements for all BSP-supervised financial institutions
+- Compliance officer seminars on AML/CFT are mandatory
 
-1. **PSP Partner Relationship at Risk:** A key Philippine PSP partner is already reviewing its relationship with Yuno. Loss of this partnership would significantly impact Philippine market operations.
+#### Applicability to Payment Orchestrators
 
-2. **BSP Heightened Scrutiny:** Following regional incidents, BSP has increased examination of payment service providers and their technology partners.
+**Regulatory Clarity:** Unlike Indonesia, the Philippines has more explicit licensing categories for payment service providers. However, payment orchestrators remain an emerging category that BSP regulations do not directly address.
 
-3. **Covered Person Status:** Under AMLA, entities facilitating fund transfers may be classified as "covered persons" with direct AML obligations.
+**The PSP Partner Dynamic:** The terse message from Yuno's Philippine PSP partner stating they are "reviewing all payment orchestration relationships for KYB adequacy" is significant. Under BSP regulations, licensed entities bear direct compliance responsibility and face enforcement consequences for failures in their merchant portfolio. PSP partners may:
+1. Require Yuno to demonstrate enhanced KYB capabilities
+2. Demand access to Yuno's merchant data for their own compliance verification
+3. Restrict or terminate relationships with orchestrators lacking robust compliance programs
+4. Report concerns to BSP as part of their own compliance obligations
 
-#### Key Regulatory Requirements
+**Risk Assessment:** The immediate risk in the Philippines is commercial (loss of PSP partnership) rather than direct regulatory enforcement against Yuno. However, if Yuno merchants facilitated through Philippine PSPs are implicated in illicit activity, BSP investigations would likely examine the entire transaction chain, including Yuno's role.
 
-**BSP Circular 706 requires payment system operators to:**
-- Implement risk-based customer acceptance policies
-- Conduct customer due diligence (CDD) and enhanced due diligence (EDD) where appropriate
-- Maintain records for at least 5 years
-- Report covered and suspicious transactions
+#### Risk Level: **HIGH**
 
-**AMLA Requirements:**
-- Customer identification program
-- Record-keeping requirements
-- Suspicious transaction reporting
-- Compliance officer designation
-
-#### Recommended Actions for Philippines
-
-| Priority | Action | Timeline | Responsible |
-|----------|--------|----------|-------------|
-| 1 | Schedule call with PSP partner compliance team | 7 days | Business Development |
-| 2 | Prepare compliance enhancement presentation for PSP | 14 days | Compliance |
-| 3 | Review all Philippine merchant accounts for risk indicators | 21 days | Compliance |
-| 4 | Engage Philippine legal counsel for BSP consultation | 30 days | Legal |
+The active PSP partner review creates immediate commercial risk. Additionally, BSP's regulatory framework emphasizes that all participants in the payment ecosystem must contribute to AML/CFT objectives. Yuno's current minimal onboarding practices are inconsistent with the compliance posture our PSP partners must maintain.
 
 ---
 
-### 1.4 Singapore Analysis
+### C. Singapore
 
 #### Regulatory Framework
 
-| Regulation | Authority | Relevance to Yuno |
-|------------|-----------|-------------------|
-| Payment Services Act 2019 | MAS | Licensing and conduct requirements |
-| MAS Notice PSN01 | MAS | AML/CFT requirements for payment services |
-| MAS Notice PSN02 | MAS | Technology risk management |
+Singapore's Payment Services Act 2019 (PSA), effective January 28, 2020, represents the most comprehensive payment services regulatory framework in APAC:
 
-#### Current Risk Assessment: MEDIUM
+- **Licensing Categories:** The PSA covers seven payment service activities, including merchant acquisition services
+- **Customer Due Diligence:** Firms must verify customer identities and the nature of their business, with simplified due diligence for lower-risk customers and enhanced due diligence for higher-risk customers
+- **Beneficial Ownership:** Explicit requirements for verifying businesses and their beneficial owners, including directors, partners, and persons with executive authority
+- **Transaction Monitoring:** Payment services firms must monitor transactions for signs of money laundering and terrorism financing based on thresholds, patterns, and high-risk country connections
+- **Sanctions Screening:** Firms must screen customers against UNSC sanctions lists and MAS sanctions lists
 
-**Specific Concerns:**
+#### Applicability to Payment Orchestrators
 
-1. **Licensing Requirements:** The Payment Services Act 2019 has clear licensing categories. Yuno's activities may require a license as a "payment service provider" under one or more categories.
+**Regulatory Clarity:** The PSA explicitly covers "merchant acquisition services" where service providers handle payment processing on merchants' behalf. While Yuno does not directly acquire merchants in the traditional sense, its role in routing transactions and maintaining merchant relationships may fall within MAS's regulatory purview.
 
-2. **AML/CFT Notice PSN01:** If licensed or operating in Singapore, Yuno would be subject to comprehensive AML/CFT requirements including:
-   - Customer due diligence
-   - Enhanced measures for high-risk situations
-   - Correspondent banking due diligence (applicable to payment service relationships)
+**Key Question:** Does Yuno's activity constitute a "payment service" requiring a license, or is Yuno a technology provider outside the PSA's scope?
 
-3. **Regulatory Precedent:** Singapore's strict enforcement creates precedent that other ASEAN regulators follow.
+**Factors Suggesting Regulatory Coverage:**
+- Yuno has direct contractual relationships with merchants
+- Yuno's platform makes routing decisions affecting transaction processing
+- Yuno collects business information during onboarding (even if limited)
+- Yuno processes $2.3 billion in annualized transaction volume
 
-#### Key Regulatory Requirements
+**Factors Against Regulatory Coverage:**
+- Yuno does not hold funds or settle transactions
+- PSP partners maintain acquiring relationships and licensing
+- Yuno's contracts characterize its role as technology provision
 
-**Payment Services Act 2019 - Relevant License Types:**
-- **Major Payment Institution (MPI):** Required if transaction volume exceeds thresholds
-- **Standard Payment Institution (SPI):** For lower-volume operations
+**Risk Assessment:** MAS has historically taken a substance-over-form approach to regulatory interpretation. The question is whether Yuno's activities, as conducted, constitute a payment service regardless of how they are contractually characterized. Given Singapore's rigorous regulatory environment and MAS's active enforcement posture, operating in Singapore without clarity on licensing status presents meaningful risk.
 
-**MAS Notice PSN01 Requirements:**
-- Risk assessment and risk-based approach
-- Customer due diligence (CDD)
-- Enhanced due diligence for higher-risk customers
-- Ongoing monitoring
-- Suspicious transaction reporting
-- Record keeping (5 years minimum)
+#### Risk Level: **MEDIUM-HIGH**
 
-#### Recommended Actions for Singapore
-
-| Priority | Action | Timeline | Responsible |
-|----------|--------|----------|-------------|
-| 1 | Conduct licensing assessment with Singapore counsel | 30 days | Legal |
-| 2 | Map current practices against PSN01 requirements | 45 days | Compliance |
-| 3 | Implement compliant merchant onboarding process | 60 days | Product/Engineering |
-| 4 | Establish MAS notification/reporting protocols | 60 days | Compliance |
+Singapore presents clear regulatory requirements but uncertain application to orchestrators. If MAS determines that Yuno requires licensing, operating without a license would constitute a serious regulatory violation. Conversely, if MAS confirms Yuno falls outside PSA scope, Singapore exposure is limited to reputational and commercial concerns. We recommend seeking regulatory clarity proactively.
 
 ---
 
-## SECTION 2: RISK MITIGATION STRATEGY
+## PART II: LEGAL EXPOSURE ANALYSIS
 
-### 2.1 Enhanced Merchant Screening Framework
+### A. Key Vulnerabilities
 
-#### Tier-Based Due Diligence Model
+#### 1. Contractual Provisions Are Not a Regulatory Shield
 
-| Merchant Risk Tier | Criteria | Due Diligence Level | Approval Process |
-|--------------------|----------|---------------------|------------------|
-| **Tier 1 - Low Risk** | Standard e-commerce, Singapore-based, <$100K monthly volume | Simplified DD | Automated approval |
-| **Tier 2 - Medium Risk** | Gaming, remittance, higher-risk jurisdictions | Standard DD | Compliance review |
-| **Tier 3 - High Risk** | Crypto-adjacent, complex ownership, PEP involvement | Enhanced DD | Senior compliance + Legal approval |
-| **Tier 4 - Prohibited** | Sanctions match, unlicensed financial services, illegal activity | Rejection | Auto-reject |
+Yuno's PSP contracts state that "Partner is solely responsible for all regulatory compliance, licensing, KYC/KYB, AML, and transaction monitoring obligations in its jurisdiction." While this language may govern the commercial relationship between Yuno and its PSP partners (including indemnification and risk allocation), **contractual provisions do not bind regulators.**
 
-#### Minimum Due Diligence Requirements
+Regulators assess compliance obligations based on statutory and regulatory frameworks, not private contracts. If a regulator determines that Yuno has independent obligations—whether explicit or implied under "payment chain responsibility" doctrines—the PSP contract will not provide a defense.
 
-**All Merchants (Simplified DD):**
-- [ ] Business registration verification
-- [ ] Business address confirmation
-- [ ] Contact information validation
-- [ ] Sanctions screening (business name)
-- [ ] Basic website/business model review
+Furthermore, in enforcement proceedings, regulators may view such contractual language as evidence that Yuno was aware of compliance requirements but deliberately structured its relationships to avoid direct responsibility—a potentially aggravating factor.
 
-**Medium Risk (Standard DD):**
-- [ ] All Simplified DD requirements
-- [ ] Beneficial ownership identification (>25% ownership)
-- [ ] Sanctions screening (all beneficial owners)
-- [ ] Business license/permit verification
-- [ ] Financial statements or bank reference
-- [ ] PEP screening for beneficial owners
+#### 2. The "Payment Chain Responsibility" Doctrine
 
-**High Risk (Enhanced DD):**
-- [ ] All Standard DD requirements
-- [ ] Source of funds documentation
-- [ ] Detailed business model review
-- [ ] On-site visit or video verification
-- [ ] Third-party due diligence report
-- [ ] Senior management approval
-- [ ] Ongoing enhanced monitoring
+The Indonesian regulator's statement that "all entities in the payment chain share responsibility" reflects a global trend toward expanded compliance expectations:
 
-### 2.2 Sanctions Screening Implementation
+- **FATF Guidance:** Financial Action Task Force recommendations increasingly emphasize that AML/CFT obligations extend throughout payment ecosystems
+- **EU Developments:** Under PSD2 and the forthcoming PSD3, the European approach emphasizes shared responsibility among payment chain participants
+- **U.S. Precedent:** U.S. regulators have pursued enforcement actions against technology platforms that facilitated payments, even when those platforms were not traditional financial institutions
 
-#### Screening Requirements
+This doctrine is particularly relevant for Yuno because:
+- Yuno sits at the center of the transaction routing decision
+- Yuno has visibility across multiple PSP relationships
+- Yuno has a direct relationship with merchants that PSPs may lack
+- Yuno's technology choices directly affect which compliance framework applies to each transaction
 
-| Screen Type | Timing | Lists | Action on Match |
-|-------------|--------|-------|-----------------|
-| **Initial Screening** | Onboarding | OFAC, UN, EU, Local | Block if match; Review if potential |
-| **Ongoing Screening** | Daily batch | OFAC, UN, EU, Local | Alert for review; Suspend if confirmed |
-| **Transaction Screening** | Real-time | OFAC, UN | Block transaction; Flag account |
+#### 3. High-Risk Merchant Exposure (8% of Merchant Base)
 
-#### Recommended Sanctions Lists
+Approximately 8% of Yuno's merchants operate in categories typically considered higher-risk for AML purposes:
+- Money transfer services
+- Crypto-adjacent services
+- High-value luxury goods
 
-1. **OFAC SDN List** (US Office of Foreign Assets Control)
-2. **UN Security Council Consolidated List**
-3. **EU Consolidated Sanctions List**
-4. **MAS Lists of Designated Individuals and Entities** (Singapore)
-5. **AMLC Targeted Financial Sanctions List** (Philippines)
-6. **PPATK Lists** (Indonesia)
+These categories receive heightened regulatory scrutiny globally. Without enhanced due diligence for this segment, Yuno faces disproportionate risk from a relatively small portion of its merchant base.
 
-### 2.3 Beneficial Ownership Requirements
+#### 4. Multi-PSP Routing Creates Monitoring Gaps
 
-#### Identification Thresholds
+A significant structural vulnerability: merchants using Yuno may have transactions routed through multiple PSPs based on geography, payment method, and optimization factors. This creates:
 
-| Jurisdiction | Threshold | Documentation Required |
-|--------------|-----------|------------------------|
-| Singapore | 25% ownership or control | ACRA Bizfile, ID documents |
-| Philippines | 20% ownership | SEC registration, ID documents |
-| Indonesia | 25% ownership | Company deed, ID documents |
-| **Yuno Standard** | **20% ownership** | **Passport/National ID, Proof of address** |
+- **Fragmented monitoring:** Each PSP sees only a portion of the merchant's transaction activity
+- **Pattern recognition failures:** Suspicious patterns that would be visible in consolidated data may be invisible when distributed across PSPs
+- **Responsibility gaps:** No single entity has complete visibility into a merchant's transaction behavior
 
-#### Complex Ownership Structures
+This is precisely the type of systemic gap that regulators increasingly expect platforms to address.
 
-For merchants with:
-- Multiple layers of corporate ownership
-- Nominee shareholders
-- Trust structures
-- Cross-border ownership
+#### 5. Current Onboarding Deficiencies
 
-**Require:**
-1. Full ownership chart to ultimate beneficial owners
-2. Explanation of structure purpose
-3. Enhanced ongoing monitoring
-4. Annual ownership confirmation
+Yuno's current onboarding practices fall below regulatory expectations and industry best practices:
 
-### 2.4 PEP (Politically Exposed Person) Screening
-
-#### PEP Definition
-
-A Politically Exposed Person includes:
-- Heads of state, government ministers, senior politicians
-- Senior judicial officials
-- Senior military officials
-- Senior executives of state-owned enterprises
-- **Family members** of the above
-- **Close associates** of the above
-
-#### PEP Handling Procedures
-
-| PEP Status | Action Required |
-|------------|-----------------|
-| **PEP Identified** | Enhanced due diligence required |
-| **PEP - Low Risk** | Senior compliance approval; Annual review |
-| **PEP - High Risk** | Legal + Compliance + CEO approval; Quarterly review |
-| **PEP - Sanctioned Jurisdiction** | Rejection unless exceptional circumstances |
-
-### 2.5 Ongoing Monitoring Framework
-
-#### Transaction Monitoring
-
-| Indicator | Threshold | Action |
-|-----------|-----------|--------|
-| Volume spike | >200% of normal | Alert for review |
-| High-risk country transactions | Any | Enhanced review |
-| Round number transactions | Pattern detected | Alert for review |
-| Rapid fund movement | In/out within 24hrs | Alert for review |
-| Weekend/night activity | Unusual pattern | Alert for review |
-
-#### Periodic Reviews
-
-| Merchant Risk Level | Review Frequency | Review Scope |
-|---------------------|------------------|--------------|
-| Low Risk | Annual | Ownership confirmation, Sanctions re-screen |
-| Medium Risk | Semi-annual | Full CDD refresh |
-| High Risk | Quarterly | Full EDD refresh, Transaction review |
+| Requirement | Current State | Gap |
+|-------------|---------------|-----|
+| Business registration verification | Basic collection | Limited verification |
+| Beneficial ownership identification | Not performed | Complete gap |
+| Sanctions screening | Not performed | Complete gap |
+| Business model risk assessment | Not performed | Complete gap |
+| Ongoing transaction monitoring | Not performed | Complete gap |
 
 ---
 
-## SECTION 3: IMPLEMENTATION ROADMAP
+### B. Legal vs. Reputational Risk Matrix
 
-### Phase 1: Immediate Actions (Days 1-30)
-
-| Week | Deliverable | Owner |
-|------|-------------|-------|
-| 1 | Form compliance task force | CEO |
-| 1 | Engage external counsel (Indonesia, Philippines) | Legal |
-| 2 | Complete retrospective merchant review (Indonesia exposure) | Compliance |
-| 2 | Implement basic sanctions screening | Engineering |
-| 3 | Deploy enhanced onboarding questionnaire | Product |
-| 3 | Schedule PSP partner compliance call | Business Dev |
-| 4 | Complete risk assessment of existing portfolio | Compliance |
-| 4 | Establish compliance reporting to Board | Compliance |
-
-### Phase 2: Foundation Building (Days 31-60)
-
-| Week | Deliverable | Owner |
-|------|-------------|-------|
-| 5-6 | Deploy automated KYB system | Engineering |
-| 5-6 | Implement beneficial ownership collection | Product |
-| 7 | Complete Singapore licensing assessment | Legal |
-| 7 | Train operations team on new procedures | Compliance |
-| 8 | Implement risk-based merchant tiering | Compliance |
-| 8 | Establish ongoing monitoring protocols | Compliance |
-
-### Phase 3: Enhancement (Days 61-90)
-
-| Week | Deliverable | Owner |
-|------|-------------|-------|
-| 9-10 | Integrate PEP screening database | Engineering |
-| 9-10 | Deploy transaction monitoring rules | Engineering |
-| 11 | Complete PSN01 gap analysis (Singapore) | Compliance |
-| 11 | Establish regulatory relationship protocols | Legal |
-| 12 | Conduct compliance program audit | External |
-| 12 | Board presentation on compliance program | CEO/Compliance |
+| Jurisdiction | Legal Risk | Reputational/Commercial Risk | Primary Concern |
+|--------------|------------|------------------------------|-----------------|
+| Indonesia | HIGH - Expanding regulatory interpretation | HIGH - Regional attention | Legal |
+| Philippines | MEDIUM - Indirect through PSP partners | HIGH - Active partnership at risk | Commercial (immediate), Legal (secondary) |
+| Singapore | MEDIUM-HIGH - Licensing uncertainty | MEDIUM - MAS reputation matters | Legal (clarity needed) |
+| Brazil/Mexico/Colombia | LOW - Different regulatory focus | MEDIUM - Investor confidence | Reputational |
 
 ---
 
-## SECTION 4: RESOURCE REQUIREMENTS
+## PART III: PRACTICAL RISK MITIGATION STRATEGY
 
-### Budget Estimate
+### Phase 1: Immediate Actions (0-30 Days)
 
-| Category | One-time Cost (USD) | Annual Cost (USD) |
-|----------|---------------------|-------------------|
-| **Technology** | | |
-| KYB/Screening System | 50,000 - 80,000 | 20,000 - 30,000 |
-| Transaction Monitoring | 30,000 - 50,000 | 15,000 - 25,000 |
-| **Personnel** | | |
-| Compliance Officer (hire) | 15,000 (recruiting) | 80,000 - 120,000 |
-| Training | 10,000 | 5,000 |
-| **External Services** | | |
-| Legal Counsel | 40,000 - 60,000 | 20,000 - 30,000 |
-| Sanctions Data Provider | - | 15,000 - 25,000 |
-| External Audit | 15,000 - 20,000 | 15,000 - 20,000 |
-| **Total** | **160,000 - 235,000** | **170,000 - 255,000** |
+#### 1.1 Philippine PSP Partner Engagement
+**Owner:** Head of Partnerships
+**Priority:** CRITICAL
 
-### Staffing Requirements
+- Schedule call within 48 hours to understand specific concerns
+- Prepare enhanced compliance roadmap to demonstrate commitment
+- Offer to share merchant KYB data under appropriate confidentiality protections
+- Propose joint compliance review to identify specific gaps
+- Document all communications for regulatory response purposes
 
-| Role | Current | Required | Gap |
-|------|---------|----------|-----|
-| Chief Compliance Officer | 0 | 1 | **Hire** |
-| Compliance Analyst | 0 | 2 | **Hire** |
-| Legal Counsel (in-house) | 1 | 1 | Adequate |
-| Engineering (compliance features) | 0 | 1 | **Allocate** |
+#### 1.2 Investor Briefing Materials
+**Owner:** General Counsel + CFO
+**Priority:** HIGH
+
+Prepare standardized materials addressing:
+- Yuno's current compliance posture (accurate, not defensive)
+- Distinction between legal exposure and reputational concern
+- Concrete remediation timeline
+- Resource commitment to compliance enhancement
+- Governance oversight of compliance program
+
+#### 1.3 Immediate Sanctions Screening Implementation
+**Owner:** Head of Compliance
+**Priority:** CRITICAL
+
+- Implement sanctions screening for all new merchant onboarding immediately
+- Select vendor with global watchlist coverage (OFAC, UN, EU, MAS, local lists)
+- Screen existing merchant base within 30 days
+- Establish clear procedures for positive matches and escalation
+- Estimated implementation: 5-7 business days with third-party provider
+
+#### 1.4 Independent Gap Analysis
+**Owner:** General Counsel
+**Priority:** HIGH
+
+Commission external review comparing:
+- Current onboarding practices vs. regulatory requirements in priority markets
+- Current practices vs. industry best practices for payment platforms
+- Specific gaps requiring remediation
+- Resource and timeline estimates for gap closure
+
+#### 1.5 Enhanced Due Diligence for High-Risk Segment
+**Owner:** Head of Compliance
+**Priority:** HIGH
+
+For the 8% of merchants in high-risk categories:
+- Implement immediate enhanced review procedures
+- Require beneficial ownership disclosure
+- Conduct business model verification
+- Establish periodic re-verification requirements
+- Consider risk-based pricing or transaction limits pending full compliance
 
 ---
 
-## SECTION 5: LEGAL RISK SUMMARY
+### Phase 2: Short-Term Actions (30-90 Days)
 
-### Potential Regulatory Penalties
+#### 2.1 Tiered KYB Framework Implementation
+**Owner:** Head of Compliance + Product
+**Priority:** HIGH
 
-| Jurisdiction | Violation Type | Potential Penalty |
-|--------------|----------------|-------------------|
-| **Singapore** | PSA violation | Up to SGD 1,000,000 per offense |
-| **Singapore** | AML violation | Up to SGD 500,000 per offense |
-| **Philippines** | AMLA violation | PHP 500,000 - 5,000,000 + imprisonment |
-| **Indonesia** | AML violation | IDR 1 - 100 billion |
+Implement risk-based approach:
 
-### Reputational Risk Factors
+**Enhanced Due Diligence (High-Risk: ~8%)**
+- Full beneficial ownership verification
+- Business model documentation and review
+- Source of funds verification
+- Ongoing enhanced monitoring
+- Annual re-verification
 
-1. **Media Coverage:** Payment processor involvement in gambling scandal is highly newsworthy
-2. **PSP Partner Confidence:** Partners may terminate relationships preemptively
-3. **Merchant Confidence:** Legitimate merchants may seek alternative providers
-4. **Investor Confidence:** Compliance failures impact valuation and funding
+**Standard Due Diligence (Medium-Risk: ~40%)**
+- Business registration verification
+- Beneficial ownership identification (not full verification)
+- Sanctions screening
+- Basic business model review
+- Bi-annual re-verification
 
-### Litigation Risk
+**Simplified Due Diligence (Low-Risk: ~52%)**
+- Business registration verification
+- Sanctions screening
+- Annual re-verification
+- Transaction-based monitoring triggers
 
-| Scenario | Likelihood | Potential Exposure |
-|----------|------------|-------------------|
-| Regulatory enforcement action | Medium | $500K - $5M |
-| PSP contract termination claims | Low-Medium | $100K - $500K |
-| Class action (if public company) | Low | $1M+ |
-| Criminal referral (executives) | Very Low | Personal liability |
+#### 2.2 PSP Contract Renegotiation
+**Owner:** General Counsel + Head of Partnerships
+**Priority:** HIGH
+
+Key negotiation points:
+- KYB data sharing provisions (access to PSP verification results)
+- Information sharing protocols for suspicious activity
+- Clear delineation of compliance responsibilities
+- Cooperation requirements for regulatory inquiries
+- Audit rights and procedures
+- Termination provisions tied to compliance failures
+
+#### 2.3 Beneficial Ownership Verification Capability
+**Owner:** Head of Compliance
+**Priority:** MEDIUM-HIGH
+
+- Select and implement beneficial ownership verification provider
+- Integrate with merchant onboarding workflow
+- Establish verification standards (25% ownership threshold consistent with FATF)
+- Create ongoing monitoring for ownership changes
+- Document verification procedures for regulatory review
+
+#### 2.4 Regulatory Engagement - Singapore
+**Owner:** General Counsel
+**Priority:** MEDIUM-HIGH
+
+Proactively engage with MAS to clarify licensing status:
+- Prepare detailed description of Yuno's business model
+- Seek guidance on PSA applicability
+- If licensing required, initiate application process
+- If not required, obtain written confirmation for records
 
 ---
 
-## SECTION 6: RECOMMENDATIONS
+### Phase 3: Medium-Term Actions (90+ Days)
 
-### Immediate Priorities
+#### 3.1 Consolidated Transaction Monitoring
+**Owner:** Head of Compliance + Engineering
+**Priority:** MEDIUM
 
-1. **APPOINT** a Chief Compliance Officer with regional AML expertise within 30 days
+Build capability to:
+- Aggregate transaction data across PSP relationships
+- Identify patterns invisible to individual PSPs
+- Detect velocity changes, geographic anomalies, and unusual patterns
+- Generate alerts for compliance review
+- Produce SAR-quality documentation when required
 
-2. **IMPLEMENT** enhanced merchant screening immediately for all new onboarding
+#### 3.2 Transaction Pattern Analytics
+**Owner:** Data Science + Compliance
+**Priority:** MEDIUM
 
-3. **CONDUCT** retrospective review of existing merchant portfolio for Indonesia exposure
+Develop monitoring for:
+- Structuring patterns (transactions designed to avoid reporting thresholds)
+- Rapid merchant behavior changes
+- Geographic risk indicators
+- Payment method anomalies
+- Peer comparison analysis
 
-4. **ENGAGE** proactively with Philippine PSP partner to demonstrate compliance commitment
+#### 3.3 Regulatory Engagement Strategy
+**Owner:** General Counsel + Government Affairs
+**Priority:** MEDIUM
 
-5. **RETAIN** external counsel in Indonesia and Philippines for regulatory guidance
+Develop proactive engagement approach for key markets:
+- Regular meetings with regulators in Indonesia, Philippines, Singapore
+- Participation in industry consultations and working groups
+- Position Yuno as thought leader in orchestrator compliance
+- Build relationships before enforcement situations arise
 
-### Strategic Recommendations
+#### 3.4 Compliance Program Documentation
+**Owner:** Head of Compliance
+**Priority:** MEDIUM
 
-6. **INVEST** in automated KYB/AML infrastructure as competitive differentiator
+Create comprehensive compliance documentation:
+- Written policies and procedures
+- Training materials and records
+- Audit trails and decision documentation
+- Board and management reporting frameworks
+- Third-party management procedures
 
-7. **ESTABLISH** Board-level compliance oversight with quarterly reporting
+---
 
-8. **DEVELOP** regulatory relationships proactively before enforcement actions
+## PART IV: KEY AMBIGUITIES AND JUDGMENT CALLS
 
-9. **CONSIDER** voluntary regulatory engagement to demonstrate good faith
+### 1. Where Does Orchestrator Responsibility Begin and End?
 
-10. **DOCUMENT** all compliance enhancements for potential regulatory defense
+**The Core Ambiguity:** No jurisdiction has explicitly defined KYB obligations for payment orchestrators. Yuno's legal obligations must be inferred from:
+- General AML/CFT principles
+- Payment services regulations designed for different business models
+- Regulatory statements about "payment chain responsibility"
+- Analogies to similar businesses
+
+**Our Judgment:** We believe regulators will increasingly view orchestrators as having independent compliance obligations, particularly where:
+- The orchestrator has a direct merchant relationship
+- The orchestrator makes routing decisions affecting regulatory jurisdiction
+- The orchestrator has visibility that PSPs lack
+- The orchestrator derives commercial benefit from the payment flow
+
+Yuno meets all four criteria. We recommend proceeding as though Yuno has independent KYB obligations rather than waiting for regulatory clarification that may come in the form of enforcement.
+
+### 2. Adequacy of Contractual Risk Transfer
+
+**The Core Ambiguity:** Do Yuno's contracts with PSPs effectively transfer compliance risk?
+
+**Our Judgment:** For regulatory purposes, no. For commercial purposes, partially.
+
+- Regulators will assess Yuno's conduct against their standards, not contract terms
+- However, if Yuno faces enforcement, robust contracts may support indemnification claims against PSP partners
+- Contract terms may also affect commercial negotiations with PSPs facing their own regulatory pressure
+
+### 3. Regulatory Interpretation of "Payment Chain"
+
+**The Core Ambiguity:** How broadly will regulators interpret "payment chain responsibility"?
+
+**Our Judgment:** We expect expanding interpretation over time. The Indonesian statement is an early signal of a broader trend. FATF guidance, EU regulatory developments, and U.S. enforcement patterns all suggest that:
+- Technology platforms will face increasing scrutiny
+- "We're just technology" defenses will become less effective
+- Substance-over-form analysis will dominate
+
+### 4. Proportionality of Compliance Investment
+
+**The Core Ambiguity:** How much should Yuno invest in compliance infrastructure given uncertain legal requirements?
+
+**Our Judgment:** The proposed program is calibrated to:
+- Address the most critical gaps (sanctions screening, beneficial ownership for high-risk)
+- Build scalable infrastructure for future requirements
+- Demonstrate good faith to regulators and commercial partners
+- Avoid operational paralysis from over-engineering
+
+We recommend this level of investment as a reasonable balance between legal risk mitigation and business needs.
+
+---
+
+## PART V: RECOMMENDATIONS SUMMARY
+
+### Prioritized Action List
+
+| Priority | Action | Owner | Timeline | Resources |
+|----------|--------|-------|----------|-----------|
+| 1 | Philippine PSP engagement | Partnerships | Immediate | Leadership time |
+| 2 | Sanctions screening implementation | Compliance | 7 days | $50-100K/year |
+| 3 | Investor briefing materials | Legal/Finance | 14 days | Internal |
+| 4 | Independent gap analysis | Legal | 30 days | $75-150K |
+| 5 | High-risk merchant EDD | Compliance | 30 days | Internal + vendor |
+| 6 | Tiered KYB framework | Compliance/Product | 60 days | $200-400K implementation |
+| 7 | PSP contract renegotiation | Legal/Partnerships | 90 days | Internal |
+| 8 | Singapore MAS engagement | Legal | 60 days | $50-100K (external counsel) |
+| 9 | Beneficial ownership verification | Compliance | 90 days | $100-200K/year |
+| 10 | Consolidated monitoring | Engineering/Compliance | 180 days | $500K-1M |
+
+### Resource Requirements
+
+**Immediate (0-30 days):** $125-250K + significant leadership time
+**Short-term (30-90 days):** $350-700K implementation costs
+**Medium-term (90+ days):** $600K-1.2M + ongoing operational costs
+
+**Ongoing Annual Costs:** Approximately $350-500K for sanctions screening, beneficial ownership verification, and monitoring tools
+
+### Success Metrics
+
+1. **Regulatory:** No adverse regulatory findings or enforcement actions in priority markets
+2. **Commercial:** Retention of Philippine PSP partnership; satisfactory completion of enterprise client audits
+3. **Investor Relations:** Positive response to compliance briefings; no investor exits citing compliance concerns
+4. **Operational:** 100% sanctions screening coverage; beneficial ownership verified for all high-risk merchants
 
 ---
 
 ## CONCLUSION
 
-The Indonesian payment facilitator scandal has created a critical inflection point for Yuno. While Yuno's role as a payment orchestrator may provide some regulatory distance from direct merchant misconduct, this protection is narrowing rapidly as regulators expand oversight across the payment chain.
+Yuno faces genuine regulatory exposure following the Indonesian enforcement action. While the company's contractual arrangements with PSPs were designed to allocate compliance responsibility, these arrangements do not bind regulators and may prove insufficient as "payment chain responsibility" doctrines expand.
 
-**The cost of proactive compliance investment (approximately USD 200,000 one-time + USD 200,000 annually) is substantially less than the potential cost of regulatory enforcement, reputational damage, or loss of PSP partnerships.**
+The good news: Yuno's current gaps are addressable with reasonable investment, and proactive remediation can position the company favorably with regulators, commercial partners, and investors. The proposed program balances risk mitigation against operational practicality.
 
-Moreover, robust KYB/AML capabilities represent a competitive advantage. As regulatory requirements tighten, merchants will increasingly select payment providers who can demonstrate compliance excellence.
-
-**We strongly recommend immediate implementation of the actions outlined in this memorandum.**
+We recommend proceeding with the immediate actions outlined above and scheduling a follow-up discussion with the executive team within 30 days to assess progress and adjust the roadmap as needed.
 
 ---
 
-## APPENDICES
+**APPENDIX A: Regulatory Framework Details**
 
-### Appendix A: Regulatory Contact Information
+### Indonesia - Key Regulations
 
-| Jurisdiction | Authority | Contact |
-|--------------|-----------|---------|
-| Singapore | MAS FinTech Office | fintech@mas.gov.sg |
-| Philippines | BSP Financial Consumer Protection | consumeraffairs@bsp.gov.ph |
-| Indonesia | Bank Indonesia | bicara@bi.go.id |
+- Bank Indonesia Regulation No. 4 of 2025 on Payment System Policy
+- Bank Indonesia Regulation No. 10 of 2025 on Payment System Industry Regulation (effective March 31, 2026)
+- Indonesia Payment System Blueprint 2025-2030
+- OJK Regulation No. 3 of 2024 on Financial Sector Technology Innovation
 
-### Appendix B: Recommended External Counsel
+### Philippines - Key Regulations
 
-| Jurisdiction | Recommended Firms | Specialization |
-|--------------|-------------------|----------------|
-| Singapore | Allen & Gledhill, WongPartnership | Payments, MAS regulatory |
-| Philippines | SyCip Salazar Hernandez & Gatmaitan | BSP regulatory, AML |
-| Indonesia | ABNR, Hadiputranto Hadinoto & Partners | BI/OJK regulatory |
+- BSP Circular No. 1206 (Series of 2024) - Money Service Business Rules
+- BSP Circular No. 1170 - Electronic KYC Verification
+- Manual of Regulations for Non-bank Financial Institutions (MORNBFI)
+- Merchant Acquirer License (MAL) Guidelines (January 2025)
 
-### Appendix C: Reference Documents
+### Singapore - Key Regulations
 
-1. Payment Services Act 2019 (Singapore)
-2. MAS Notice PSN01 on Prevention of Money Laundering and Countering the Financing of Terrorism
-3. BSP Circular No. 706 - Rules and Regulations on Electronic Money
-4. Bank Indonesia Regulation No. 22/23/PBI/2020
-5. Republic Act No. 9160 (AMLA) as amended
+- Payment Services Act 2019 (effective January 28, 2020)
+- MAS Notice PS-N01 (AML/CFT requirements)
+- MAS Guidelines on Licensing for Payment Service Providers
 
 ---
 
-*This memorandum is intended for internal use only and constitutes privileged attorney-client communication. Distribution outside of Yuno executive leadership requires prior approval.*
+**APPENDIX B: Glossary of Terms**
 
-**Prepared by:** Legal & Compliance Advisory Team
+| Term | Definition |
+|------|------------|
+| KYB | Know Your Business - due diligence processes for business client onboarding |
+| KYC | Know Your Customer - due diligence processes for individual customer verification |
+| AML | Anti-Money Laundering |
+| CFT | Combating the Financing of Terrorism |
+| PSP | Payment Service Provider |
+| MAS | Monetary Authority of Singapore |
+| BSP | Bangko Sentral ng Pilipinas (Central Bank of the Philippines) |
+| BI | Bank Indonesia |
+| OJK | Otoritas Jasa Keuangan (Indonesia Financial Services Authority) |
+| EDD | Enhanced Due Diligence |
+| FATF | Financial Action Task Force |
+| SAR | Suspicious Activity Report |
+| UBO | Ultimate Beneficial Owner |
+| PEP | Politically Exposed Person |
+| MAL | Merchant Acquirer License |
+| MORNBFI | Manual of Regulations for Non-bank Financial Institutions |
 
-**Review Date:** 90 days from issuance
+---
+
+*This memorandum constitutes legal advice and is protected by attorney-client privilege. Distribution should be limited to authorized recipients.*
